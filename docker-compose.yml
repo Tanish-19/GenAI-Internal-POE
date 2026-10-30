@@ -1,0 +1,10 @@
+services:
+  medical-app:
+    build: .
+    container_name: medical-image-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
+
